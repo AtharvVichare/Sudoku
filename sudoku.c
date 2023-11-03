@@ -22,8 +22,8 @@ int isSafe(int sudo[9][9], int row, int col, int num) {
     for (int x = 0; x < 9; x++) {
         if (sudo[row][x] == num || sudo[x][col] == num) {
             return 0;
-        }
-    }
+        } 
+    }//TO check wheather the number entered by the student is not same to other numbers of same row and column
 
     int startRow = row - row % 3;
     int startCol = col - col % 3;
@@ -33,7 +33,7 @@ int isSafe(int sudo[9][9], int row, int col, int num) {
                 return 0;
             }
         }
-    }
+    }//TO check wheather the number entered by the student is not same to other numbers of same row and column of a 3x3 block
 
     return 1;
 }
@@ -51,8 +51,8 @@ int play(int sudo[9][9]) {
         }
         if (!isComplete) {
             break;
-        }
-    }
+        }  
+    }  //Checking if sudoku is complete or not
 
     if (isComplete) {
         printf("Congratulations! You've solved the Sudoku.\n");
